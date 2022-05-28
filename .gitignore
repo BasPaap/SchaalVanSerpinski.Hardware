@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Bas.SchaalVanSerpinski.Hardware/.vs/Bas.SchaalVanSerpinski.Hardware/FileContentIndex
+/Bas.SchaalVanSerpinski.Hardware/.vs/Bas.SchaalVanSerpinski.Hardware/v17
+/Bas.SchaalVanSerpinski.Hardware/Debug
+/Bas.SchaalVanSerpinski.Hardware/__vm
+/Bas.SchaalVanSerpinski.Hardware/Bas.SchaalVanSerpinski.Hardware.vcxproj.filters
+/Bas.SchaalVanSerpinski.Hardware/Bas.SchaalVanSerpinski.Hardware.vcxproj.user
