@@ -29,7 +29,7 @@ void setup()
 	}
 
 	// Listen for the handshake command. If we receive it, enable all other commands.
-	commandHandler.addCallback(handshakeCommand, enableSerialCommands);
+	commandHandler.setCallback(handshakeCommand, enableSerialCommands);	
 }
 
 // Add the main program code into the continuous loop() function
@@ -67,6 +67,6 @@ void enableSerialCommands()
 {
 	// We received a request to start sending commands from the host device,
 	// so we'll enable all commands and respond that we are ready to receive them.
-	commandHandler.addCallback(showPentagramCommand, showPentagram);
+	commandHandler.setCallback(showPentagramCommand, showPentagram);
 	Serial.println(handshakeResponse);
 }

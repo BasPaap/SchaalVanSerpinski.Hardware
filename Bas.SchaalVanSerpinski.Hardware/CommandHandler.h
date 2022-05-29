@@ -28,11 +28,12 @@ namespace Bas
 		CommandHandler();
 
 		/// <summary>
-		/// Adds a callback to be called when a certain command is called.
+		/// Sets a callback to be called when a certain command is called. If a callback was already set for
+		/// this command, it will be replaced.
 		/// </summary>
 		/// <param name="command">The command to respond to.</param>
 		/// <param name="callback">The callback to call.</param>
-		void addCallback(const char* command, CallbackPointer callback);
+		void setCallback(const char* command, CallbackPointer callback);
 
 		/// <summary>
 		/// Updates the CommandHandler state. This method should be called once per loop.
