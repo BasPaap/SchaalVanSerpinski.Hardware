@@ -32,14 +32,7 @@ void Bas::CommandHandler::update()
 	{
 		char command[maxCommandSize];
 		this->serialCommandReader.getLastCommand(command, maxCommandSize);
-
-		Serial.print(millis());
-		Serial.print(" Received command ");
-		Serial.print(command);
-		Serial.print(" ");
-		Serial.print(this->numCallbacks);
-		Serial.println(".");
-
+				
 		for (size_t i = 0; i < this->numCallbacks; i++)
 		{
 			if (strcmp(this->commands[i], command) == 0)

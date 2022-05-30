@@ -38,7 +38,6 @@ bool Bas::SerialCommandReader::isCommandAvailable()
 void Bas::SerialCommandReader::getLastCommand(char* command, int size)
 {
 	strncpy(command, lastCommand, size);
-	//clearLastCommand();
 }
 
 void Bas::SerialCommandReader::clearBuffer()
