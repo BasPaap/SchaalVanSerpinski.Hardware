@@ -9,7 +9,7 @@ int pentagramDisplayDuration = 5000;
 
 constexpr auto handshakeCommand = "SERPINSKI";
 constexpr auto handshakeResponse = "SERPINSKI_OK";
-constexpr auto showPentagramCommand = "PENTAGRAM";
+constexpr auto showPentagramStartCommand = "PENTAGRAM_START";
 
 Bas::CommandHandler commandHandler;
 
@@ -38,7 +38,7 @@ void loop()
 	commandHandler.update();
 }
 
-void showPentagram()
+void showPentagramStart()
 {
 	int numLeds = sizeof(ledPins) / sizeof(int);
 	for (size_t i = 0; i < numLeds; i++)
@@ -67,6 +67,6 @@ void enableSerialCommands()
 {
 	// We received a request to start sending commands from the host device,
 	// so we'll enable all commands and respond that we are ready to receive them.
-	commandHandler.setCallback(showPentagramCommand, showPentagram);
+	commandHandler.setCallback(showPentagramStartCommand, showPentagramStart);
 	Serial.println(handshakeResponse);
 }
