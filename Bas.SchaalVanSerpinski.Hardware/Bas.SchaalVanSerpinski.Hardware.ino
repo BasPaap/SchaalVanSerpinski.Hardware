@@ -3,6 +3,7 @@
 
 int ledPins[] = { 3, 5, 6, 9, 10 };
 int fadeInSpeed = 2;
+int fadeOutSpeed = 3;
 int fadeInMaxValue = 255;
 int glowSpeed = 2;
 int pentagramDisplayDuration = 3000;
@@ -27,6 +28,7 @@ void setup()
 	for (size_t i = 0; i < sizeof(ledPins) / sizeof(int); i++)
 	{
 		pinMode(ledPins[i], OUTPUT);
+		analogWrite(ledPins[i], 0);
 	}
 
 	// Listen for the handshake command. If we receive it, enable all other commands.
@@ -88,7 +90,7 @@ void showPentagramEnd()
 			analogWrite(ledPins[i], glowOutValue);
 		}
 
-		delay(glowSpeed);
+		delay(fadeOutSpeed);
 	}
 }
 
