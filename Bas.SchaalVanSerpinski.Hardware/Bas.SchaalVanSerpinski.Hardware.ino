@@ -5,12 +5,12 @@ int ledPins[] = { 3, 5, 6, 9, 10 };
 int fadeInSpeed = 2;
 int fadeInMaxValue = 255;
 int glowSpeed = 2;
-int pentagramDisplayDuration = 5000;
+int pentagramDisplayDuration = 3000;
 
 constexpr auto handshakeCommand = "SERPINSKI";
 constexpr auto handshakeResponse = "SERPINSKI_OK";
-constexpr auto showPentagramStartCommand = "PENTAGRAM_START";
-constexpr auto showPentagramEndCommand = "PENTAGRAM_END";
+constexpr auto showPentagramStartCommand = "P_START";
+constexpr auto showPentagramEndCommand = "P_END";
 
 Bas::CommandHandler commandHandler;
 
